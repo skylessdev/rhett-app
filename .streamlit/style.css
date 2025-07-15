@@ -1,0 +1,63 @@
+/* Set Helvetica as the primary font for the entire app */
+* {
+    font-family: 'Helvetica', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Style headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica', 'Helvetica Neue', sans-serif !important;
+    font-weight: bold;
+}
+
+/* Make the app title stand out */
+.main .block-container h1:first-child {
+    font-family: 'Helvetica', 'Helvetica Neue', sans-serif !important;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Style the analyze button */
+.stButton > button {
+    font-family: 'Helvetica', 'Helvetica Neue', sans-serif !important;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* Persuasion gauge styles */
+.persuasion-gauge {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.gauge-background {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gauge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffcc00, #00cc66);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.gauge-marker {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.gauge-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}

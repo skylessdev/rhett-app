@@ -1,0 +1,30 @@
+entrypoint = "main.py"
+run = ["streamlit", "run", "main.py"]
+
+modules = ["python-3.10"]
+
+hidden = [".pythonlibs", ".streamlit"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["zip"]
+
+[deployment]
+run = ["sh", "-c", "streamlit run webapp.py --server.port 5000 --server.address 0.0.0.0"]
+ignorePorts = false
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 40091487
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run webapp.py"
